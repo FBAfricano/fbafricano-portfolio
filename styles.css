@@ -189,46 +189,7 @@ a, button, .link {
     color: var(--primary);
 }
 
-/* Disabled CV Button with Tooltip */
-.cv-button.disabled {
-    border-color: #5f6772;
-    color: #5f6772;
-    cursor: not-allowed;
-    position: relative; /* Required for tooltip positioning */
-}
 
-/* Prevent hover effect on disabled button */
-.cv-button.disabled:hover {
-    background-color: transparent;
-    color: #5f6772;
-    transform: none;
-}
-
-/* Tooltip bubble */
-.cv-button.disabled::before {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: 120%; /* Position above the button */
-    left: 50%;
-    transform: translateX(-50%) scale(0);
-    background-color: var(--secondary);
-    color: var(--light-gray);
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
-    transform-origin: bottom center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    z-index: 10;
-}
-    
-.cv-button.disabled:hover::before {
-    opacity: 1;
-    transform: translateX(-50%) scale(1);
-}
 /* END: ADDED STYLES FOR BUTTONS */
 
 .home-right .description p {
