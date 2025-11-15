@@ -1058,3 +1058,288 @@ a, button, .link {
         page-break-inside: avoid;
     }
 }
+
+
+/* =========================================
+   PORTFOLIO GRID STYLES (portfolio.html)
+   ========================================= */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: var(--secondary);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 173, 181, 0.4);
+}
+
+.project-card-image-container {
+    height: 200px;
+    background-color: #4a535e; /* Placeholder background */
+    overflow: hidden;
+}
+
+.project-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-card-image {
+    transform: scale(1.05);
+}
+
+.project-card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-title {
+    color: var(--accent);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-card-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.project-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto; /* Pushes tags to the bottom */
+}
+
+
+/* =========================================
+   INDIVIDUAL PROJECT PAGE STYLES
+   ========================================= */
+
+.project-header {
+    max-width: 1600px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.project-title {
+    font-size: 3rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.project-subtitle {
+    font-size: 1.5rem;
+    color: var(--light-gray);
+    margin-bottom: 30px;
+}
+
+/* Project Carousel */
+/* Project Carousel */
+.project-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1400px; /* Max width of carousel */
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-carousel .carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.project-carousel .carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 75vh;
+    background-color: #000;
+}
+
+.project-carousel .carousel-slide {
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* <-- TO this */
+    object-position: center; /* <-- ADDED this to ensure centering */
+    cursor: pointer; /* <-- ADDED this to show it's clickable */
+    background-color: var(--primary);
+}
+
+.project-carousel .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.project-carousel .carousel-btn.prev {
+    left: 15px;
+}
+
+.project-carousel .carousel-btn.next {
+    right: 15px;
+}
+
+.project-carousel .carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.project-carousel .indicator {
+     background-color: rgba(238, 238, 238, 0.5);
+}
+
+.project-carousel .indicator.active {
+    background-color: var(--accent);
+}
+
+
+/* Project Content Layout */
+.project-content-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.project-main-content {
+    flex: 2; /* Takes 2/3 of the space */
+    min-width: 300px; /* Ensures content doesn't get too squished */
+}
+
+.project-main-content h2 {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 10px;
+}
+
+.project-main-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.features-title {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.features-list {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.features-list li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    color: var(--light-gray);
+}
+
+.project-main-content .cv-button {
+    margin-top: 15px;
+    display: inline-block; /* Makes it a block-level link */
+}
+
+
+/* Project Metadata Sidebar */
+.project-metadata {
+    flex: 1; /* Takes 1/3 of the space */
+    min-width: 280px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    align-self: flex-start; /* Sticks to the top */
+    position: sticky;
+    top: 100px; /* 80px navbar + 20px breathing room */
+}
+
+.metadata-block {
+    margin-bottom: 25px;
+}
+
+.metadata-block strong {
+    font-size: 1.2rem;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.metadata-block p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.metadata-link {
+    font-size: 1rem;
+    color: var(--light-gray);
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+    transition: color 0.3s ease;
+}
+
+.metadata-link:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+/* Responsive adjustments for project pages */
+@media (max-width: 768px) {
+    .project-content-container {
+        flex-direction: column;
+    }
+    
+    .project-metadata {
+        position: static; /* Un-stick the sidebar on mobile */
+        width: 100%;
+    }
+
+    .project-title {
+        font-size: 2.2rem;
+    }
+
+    .project-subtitle {
+        font-size: 1.2rem;
+    }
+}

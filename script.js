@@ -526,5 +526,56 @@ function handleSwipe(wrapper) {
     }
 }
 
+/* =========================================
+   PROJECT PAGE CAROUSEL LOGIC
+   ========================================= */
+
+// This function will initialize *only* the project carousel 
+// if it's on the current page.
+function initProjectCarousel() {
+    const projectSlides = document.getElementById('project-slides');
+    if (!projectSlides) {
+        return; // Not on a project page, so do nothing
+    }
+
+    const category = 'project'; // We'll use 'project' as the key
+    const totalSlides = projectSlides.children.length;
+
+    if (totalSlides > 0) {
+        // Register this carousel in the main 'carousels' object
+        carousels[category] = {
+            currentSlide: 0,
+            totalSlides: totalSlides
+        };
+        
+        // Create indicators and update the view
+        createIndicators(category);
+        updateCarousel(category);
+        
+        console.log('Project carousel initialized!');
+        
+        // Stop the auto-advance interval from the skills carousel
+        // if it's running, as it's not needed here.
+        if (typeof autoAdvanceInterval !== 'undefined') {
+            clearInterval(autoAdvanceInterval);
+        }
+    }
+}
+
+// We need to modify the DOMContentLoaded event listener
+// to call BOTH initCarousels() (for skills) AND initProjectCarousel()
+// We'll wrap them in a new DOM listener.
+//
+// IMPORTANT: Find your existing listener that looks like:
+// document.addEventListener('DOMContentLoaded', initCarousels);
+//
+// ...and REPLACE it with this one:
+//
+document.addEventListener('DOMContentLoaded', function() {
+    initCarousels(); // This initializes the skills carousels
+    initProjectCarousel(); // This initializes the project carousel (if present)
+});
+
+
 console.log('%c Skills Carousel Loaded and Fixed! ', 'background: #00ADB5; color: white; padding: 5px; border-radius: 3px;');
 console.log('Carousel logic is now dynamic and counts slides correctly.');

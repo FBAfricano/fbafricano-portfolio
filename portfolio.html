@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    <!-- Navigation Bar -->
     <nav>
         <div class="nav-container">
             <div class="logo">
@@ -27,7 +26,6 @@
         </div>
     </nav>
 
-    <!-- Portfolio Section -->
     <section id="portfolio">
         <div class="divider" style="margin-top: 40px;">
             <hr class="divider-line">
@@ -37,75 +35,71 @@
             Portfolio
         </h1>
 
-        <div style="text-align: center; padding: 40px 20px; max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 1.3rem; color: var(--accent); margin-bottom: 20px; font-weight: bold;">
-                Coming Soon - Full Portfolio Details in Final Project
-            </p>
-            <p style="color: var(--light-gray); line-height: 1.8; font-size: 1.1rem;">
-                This section will feature a comprehensive compilation of academic and technical works developed as part of the final 
-                project requirements. It will include web applications, software design outputs, and coding implementations, each 
-                accompanied by detailed documentation, technology stacks, and project analyses. The complete portfolio will be 
-                made available upon the final project’s completion and submission.
-            </p>
+        <div class="portfolio-grid">
+
+            <a href="project1.html" class="project-card">
+                <div class="project-card-image-container">
+                    <img src="src/AppIcon.png" alt="BloomSentry Preview" class="project-card-image">
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-card-title">BloomSentry</h3>
+                    <p class="project-card-description">A thesis project to predict and visualize harmful algal bloom occurrences using machine learning.</p>
+                    <div class="project-card-tags">
+                        <span class="cert-tag">Python</span>
+                        <span class="cert-tag">HTML</span>
+                        <span class="cert-tag">JavaScript</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="project2.html" class="project-card">
+                <div class="project-card-image-container">
+                    <img src="src/underdevelpoment.webp" alt="Project 2 Preview" class="project-card-image">
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-card-title">Taskendar</h3>
+                    <p class="project-card-description">A minimalist task and calendar app that helps you organize daily schedules, track deadlines, and manage goals with ease.</p>
+                    <div class="project-card-tags">
+                        <span class="cert-tag">React</span>
+                        <span class="cert-tag">HTML</span>
+                        <span class="cert-tag">JavaScript</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="project3.html" class="project-card">
+                <div class="project-card-image-container">
+                    <img src="src/underdevelpoment.webp" alt="Project 3 Preview" class="project-card-image">
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-card-title">Devotional Journal</h3>
+                    <p class="project-card-description">A personal devotional journal designed to help you reflect on Scripture, record insights, and grow spiritually each day.</p>
+                    <div class="project-card-tags">
+                        <span class="cert-tag">React</span>
+                        <span class="cert-tag">HTML</span>
+                        <span class="cert-tag">JavaScript</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="project4.html" class="project-card">
+                <div class="project-card-image-container">
+                </div>
+                <div class="project-card-content">
+                    <h3 class="project-card-title">Mini Compiler</h3>
+                    <p class="project-card-description">A lightweight Python-based compiler that demonstrates the fundamental stages of compilation — lexing, parsing, AST construction, and evaluation.</p>
+                    <div class="project-card-tags">
+                        <span class="cert-tag">Python</span>
+                    </div>
+                </div>
+            </a>
+
         </div>
-
-        <!-- Portfolio Preview Grid -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 40px 20px; max-width: 1400px; margin: 0 auto;">
-            
-            <!-- Project Placeholder 1 -->
-            <div style="background-color: var(--secondary); border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s;">
-                <div style="height: 200px; background: linear-gradient(135deg, var(--accent), #0088a3); display: flex; align-items: center; justify-content: center;">
-                    <p style="color: white; font-size: 3rem; font-weight: bold;">P1</p>
-                </div>
-                <div style="padding: 20px;">
-                    <h3 style="color: var(--accent); margin-bottom: 10px;">Project 1</h3>
-                    <p style="color: var(--light-gray); margin-bottom: 15px;">Coming Soon</p>
-                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <span style="background-color: var(--accent); color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem;">React</span>
-                        <span style="background-color: var(--accent); color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem;">CSS</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project Placeholder 2 -->
-            <div style="background-color: var(--secondary); border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s;">
-                <div style="height: 200px; background: linear-gradient(135deg, #0088a3, var(--accent)); display: flex; align-items: center; justify-content: center;">
-                    <p style="color: white; font-size: 3rem; font-weight: bold;">P2</p>
-                </div>
-                <div style="padding: 20px;">
-                    <h3 style="color: var(--accent); margin-bottom: 10px;">Project 2</h3>
-                    <p style="color: var(--light-gray); margin-bottom: 15px;">Coming Soon</p>
-                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <span style="background-color: var(--accent); color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem;">HTML</span>
-                        <span style="background-color: var(--accent); color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem;">JavaScript</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project Placeholder 3 -->
-            <div style="background-color: var(--secondary); border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s;">
-                <div style="height: 200px; background: linear-gradient(135deg, var(--accent), #0088a3); display: flex; align-items: center; justify-content: center;">
-                    <p style="color: white; font-size: 3rem; font-weight: bold;">P3</p>
-                </div>
-                <div style="padding: 20px;">
-                    <h3 style="color: var(--accent); margin-bottom: 10px;">Project 3</h3>
-                    <p style="color: var(--light-gray); margin-bottom: 15px;">Coming Soon</p>
-                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <span style="background-color: var(--accent); color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem;">Figma</span>
-                        <span style="background-color: var(--accent); color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem;">Design</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
         <div class="divider" id="about-divider">
             <hr class="divider-line">
         </div>
     </section>
 
-    <!-- Footer -->
     <footer style="background-color: var(--secondary); padding: 30px 20px; text-align: center; border-top: 2px solid var(--accent); margin-top: 40px;">
         <p style="color: var(--light-gray); margin-bottom: 10px;">
             <strong>Franz Benjamin Africano</strong> - Computer Science Student

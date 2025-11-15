@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franz Benjamin Africano - Project 4</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Inline style block removed -->
+
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">Franz Benjamin Africano</a>
+            </div>
+            <div class="links">
+                <div class="link"><a href="index.html">Home</a></div>
+                <div class="link"><a href="education.html">Education</a></div>
+                <div class="link"><a href="experience.html">Experience</a></div>
+                <div class="link"><a href="skills.html">Skills</a></div>
+                <div class="link"><a href="certifications.html">Certifications</a></div>
+                <div class="link"><a href="advocacy.html">Advocacy</a></div>
+                <div class="link"><a href="portfolio.html">Portfolio</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-header">
+        <!-- Restored project title -->
+        <h1 class="project-title">Mini-Compiler</h1>
+        <!-- Removed placeholder subtitle -->
+
+        <!-- Replaced video container with project carousel -->
+        <div class="project-carousel">
+            <div class="carousel-wrapper">
+                <div class="carousel-slides" id="project-slides">
+                    <!-- Script removed and replaced with hardcoded images from your previous version -->
+                    <img src="/src/image2.png" alt="Mini-Compiler Screenshot 1" class="carousel-slide" onerror="this.src='https://placehold.co/800x450/2d3748/e2e8f0?text=Image+Not+Found'; this.onerror=null;">
+                    <img src="/src/image3.png" alt="Mini-Compiler Screenshot 2" class="carousel-slide" onerror="this.src='https://placehold.co/800x450/2d3748/e2e8f0?text=Image+Not+Found'; this.onerror=null;">
+                    <img src="/src/image4.png" alt="Mini-Compiler Screenshot 3" class="carousel-slide" onerror="this.src='https://placehold.co/800x450/2d3748/e2e8f0?text=Image+Not+Found'; this.onerror=null;">
+                    <img src="/src/image5.png" alt="Mini-Compiler Screenshot 4" class="carousel-slide" onerror="this.src='https://placehold.co/800x450/2d3748/e2e8f0?text=Image+Not+Found'; this.onerror=null;">
+                    <img src="/src/image7.png" alt="Mini-Compiler Screenshot 5" class="carousel-slide" onerror="this.src='https://placehold.co/800x450/2d3748/e2e8f0?text=Image+Not+Found'; this.onerror=null;">
+                    <img src="/src/image8.png" alt="Mini-Compiler Screenshot 6" class="carousel-slide" onerror="this.src='https://placehold.co/800x450/2d3748/e2e8f0?text=Image+Not+Found'; this.onerror=null;">
+                    <img src="/src/image9.png" alt="Mini-Compiler Screenshot 7" class="carousel-slide" onerror="this.src='https://placehold.co/800x450/2d3748/e2e8f0?text=Image+Not+Found'; this.onerror=null;">
+                    <img src="/src/image10.png" alt="Mini-Compiler Screenshot 8" class="carousel-slide" onerror="this.src='https://placehold.co/800x450/2d3748/e2e8f0?text=Image+Not+Found'; this.onerror=null;">
+                    <img src="/src/image11.png" alt="Mini-Compiler Screenshot 9" class="carousel-slide" onerror="this.src='httpsD8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9a_Not+Found'; this.onerror=null;">
+                    <img src="/src/image12.png" alt="Mini-Compiler Screenshot 10" class="carousel-slide" onerror="this.src='httpsS%D9%8A%D9%86%D9%8A%D8%A9a_Not+Found'; this.onerror=null;">
+                </div>
+            </div>
+            <!-- Looping script removed from here -->
+            
+            <!-- Carousel controls (from your styles.css) -->
+            <button class="carousel-btn prev" onclick="moveSlide('project', -1)">‹</button>
+            <button class="carousel-btn next" onclick="moveSlide('project', 1)">›</button>
+            <div class="carousel-indicators" id="project-indicators"></div>
+        </div>
+    </section>
+
+    <!-- Back button div removed from here -->
+
+    <section class="project-content-container">
+        
+        <main class="project-main-content">
+
+            <!-- Back button moved inside main content for better spacing -->
+            <div style="margin-bottom: 25px;">
+                <a href="portfolio.html" style="text-decoration: none; color: var(--accent, #4299e1); font-weight: 600; font-size: 0.9rem;">&larr; Back to Portfolio</a>
+            </div>
+            
+            <!-- Restored project content -->
+            <h2>About this project</h2>
+            <p>A lightweight Python compiler that demonstrates the core stages of compilation — lexing, parsing, AST construction, 
+                and evaluation. Designed as a beginner-friendly project for understanding how compilers and interpreters 
+                process code.</p>
+
+            <h3 class="features-title">Features & Functions</h3>
+            <ul class="features-list">
+                <li>◆ <strong>Lexical Analysis:</strong> Processes identifiers, literals, and operators to prepare code for parsing.</li>
+                <li>◆ <strong>Syntax Parsing:</strong> Converts code into structured AST (Abstract Syntax Tree) nodes for evaluation.</li>
+                <li>◆ <strong>AST Evaluation & Variable Storage:</strong> Evaluates AST nodes and manages variable values during execution.</li>
+                <li>◆ <strong>Modular Architecture:</strong> Separates each compiler phase into distinct modules for clarity and maintainability.</li>
+                <li>◆ <strong>Error Handling:</strong> Provides clear and informative messages for syntax or logical issues in the code.</li>
+            </ul>
+
+            <h3 class="features-title">Project Details</h3>
+            <p>For a more in-depth look at the project's features, please visit the details page.</p>
+            <a href="https://github.com/mattrias/mini-compiler" class="cv-button" target="_blank">Read More</a>
+
+        </main>
+
+        <!-- Added style="position: static;" to override sticky position from styles.css -->
+        <!-- Restored metadata content -->
+        <aside class="project-metadata" style="position: static;">
+            <div class="metadata-block">
+                <strong>Technology Stack</strong>
+                <p>Python</p>
+            </div>
+            <div class="metadata-block">
+                <strong>My Role</strong>
+                <p>Developer</p>
+            </div>
+            <div class="metadata-block">
+                <strong>Status</strong>
+                <p>Completed</p>
+            </div>
+        </aside>
+    </section>
+
+    <footer style="background-color: var(--secondary); padding: 30px 20px; text-align: center; border-top: 2px solid var(--accent); margin-top: 40px;">
+        <p style="color: var(--light-gray); margin-bottom: 10px;">
+            <strong>Franz Benjamin Africano</strong> - Computer Science Student
+        </p>
+        <p style="color: var(--light-gray); font-size: 0.9rem;">
+            © 2025 Franz Benjamin Africano. All Rights Reserved.
+        </p>
+    </footer>
+
+    <!-- NEW: Fullscreen Modal HTML -->
+    <div id="fullscreen-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); z-index: 2000; justify-content: center; align-items: center; font-family: 'Segoe UI', sans-serif;">
+        <span id="modal-close" style="position: absolute; top: 20px; right: 30px; font-size: 40px; color: white; cursor: pointer; line-height: 1; z-index: 2002;">&times;</span>
+        <button id="modal-prev" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.2); color: white; border: none; font-size: 40px; cursor: pointer; padding: 10px 15px; border-radius: 5px; z-index: 2001;">‹</button>
+        <img id="modal-image" src="" alt="Fullscreen Image" style="max-width: 90vw; max-height: 90vh; object-fit: contain;">
+        <button id="modal-next" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.2); color: white; border: none; font-size: 40px; cursor: pointer; padding: 10px 15px; border-radius: 5px; z-index: 2001;">›</button>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- NEW: Fullscreen Modal JavaScript -->
+    <script>
+    // Fullscreen Modal Logic
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('fullscreen-modal');
+        if (!modal) return; // Exit if modal isn't on the page
+
+        const modalImg = document.getElementById('modal-image');
+        const modalClose = document.getElementById('modal-close');
+        const modalPrev = document.getElementById('modal-prev');
+        const modalNext = document.getElementById('modal-next');
+
+        const projectSlides = document.querySelectorAll('#project-slides .carousel-slide');
+        const slideImages = Array.from(projectSlides).map(img => img.src);
+        let currentModalIndex = 0;
+
+        const openModal = (index) => {
+            if (slideImages.length === 0) return; // Don't open if no images
+            currentModalIndex = index;
+            modalImg.src = slideImages[currentModalIndex];
+            modal.style.display = 'flex';
+        };
+
+        const closeModal = () => {
+            modal.style.display = 'none';
+        };
+
+        const showPrev = () => {
+            if (slideImages.length === 0) return;
+            currentModalIndex = (currentModalIndex - 1 + slideImages.length) % slideImages.length;
+            modalImg.src = slideImages[currentModalIndex];
+        };
+
+        const showNext = () => {
+            if (slideImages.length === 0) return;
+            currentModalIndex = (currentModalIndex + 1) % slideImages.length;
+            modalImg.src = slideImages[currentModalIndex];
+        };
+
+        // Add click listeners to original carousel images
+        projectSlides.forEach((img, index) => {
+            img.addEventListener('click', (e) => {
+                // Stop the click from bubbling up if it's on a button, etc.
+                e.stopPropagation(); 
+                openModal(index);
+            });
+        });
+
+        // Add modal control listeners
+        modalClose.addEventListener('click', closeModal);
+        modalPrev.addEventListener('click', showPrev);
+        modalNext.addEventListener('click', showNext);
+
+        // Close on background click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Keyboard navigation for modal
+        document.addEventListener('keydown', (e) => {
+            if (modal.style.display === 'flex') {
+                if (e.key === 'ArrowLeft') showPrev();
+                if (e.key === 'ArrowRight') showNext();
+                if (e.key === 'Escape') closeModal();
+            }
+        });
+    });
+    </script>
+</body>
+</html>
