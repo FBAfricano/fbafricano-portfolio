@@ -526,22 +526,23 @@ a, button, .link {
 }
 
 .carousel-wrapper {
-    width: 100%;
-    aspect-ratio: 16 / 9; /* Controls height, fixes "too big" issue */
     overflow: hidden;
-    border-radius: 8px; /* Matches parent radius */
-    background-color: #2d3748; /* Dark background for letterboxing */
-    position: relative;
+    width: 100%;
+    max-width: 600px;
 }
 
 .carousel-slides {
-    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide {
-    height: 100%;
-    object-fit: contain;
-    display: block;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .skill-logo {
