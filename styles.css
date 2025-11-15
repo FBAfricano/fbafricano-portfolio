@@ -526,23 +526,22 @@ a, button, .link {
 }
 
 .carousel-wrapper {
-    overflow: hidden;
     width: 100%;
-    max-width: 600px;
+    aspect-ratio: 16 / 9; /* Controls height, fixes "too big" issue */
+    overflow: hidden;
+    border-radius: 8px; /* Matches parent radius */
+    background-color: #2d3748; /* Dark background for letterboxing */
+    position: relative;
 }
 
 .carousel-slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+    height: 100%;
 }
 
 .carousel-slide {
-    min-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .skill-logo {
@@ -1161,13 +1160,13 @@ a, button, .link {
 /* Project Carousel */
 /* Project Carousel */
 .project-carousel {
-    position: relative;
     width: 100%;
-    max-width: 1400px; /* Max width of carousel */
-    margin: 0 auto;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 960px; /* Constrains the carousel's max width */
+    margin: 20px auto; /* Centers the carousel on the page */
+    border-radius: 8px;
+    overflow: hidden; /* Hides parts of slides that are outside */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative; /* Needed for the prev/next buttons */
 }
 
 .project-carousel .carousel-wrapper {

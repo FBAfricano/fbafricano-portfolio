@@ -6,20 +6,29 @@
     <title>Franz Benjamin Africano - Project: BloomSentry</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Added style for responsive video */
+        /* Updated style for responsive Google Drive embed */
         .video-container {
             width: 100%;
             max-width: 960px; /* You can adjust this max-width */
             margin: 20px auto;
-            background-color: #000;
             border-radius: 8px;
-            overflow: hidden;
+            overflow: hidden; /* This is key */
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            
+            /* --- New styles for 16:9 aspect ratio --- */
+            position: relative;
+            padding-top: 56.25%; /* 9 / 16 = 0.5625 */
+            height: 0;
+            background-color: #000;
         }
-        .video-container video {
+        .video-container iframe {
+            /* --- New styles for iframe --- */
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto;
-            display: block;
+            height: 100%;
+            border: 0;
         }
     </style>
 </head>
@@ -47,11 +56,13 @@
 
         <!-- Carousel removed and replaced with video container -->
         <div class="video-container">
-            <video controls poster="https*://placehold.co/960x540/2d3748/e2e8f0?text=BloomSentry+Demo+Video">
-                <!-- IMPORTANT: Replace 'path/to/your-video.mp4' with the actual path to your video file -->
-                <source src="src/AVP Final Draft.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+
+
+            <iframe 
+                src="https://drive.google.com/file/d/1hT_yt3Yt0vCL4okUjV6DcPaQG9hxoECp/preview" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+            </iframe>
         </div>
     </section>
 
@@ -80,6 +91,11 @@
             <li>◆ <strong>Optimized Model:</strong> Uses a Gradient Boosting Regressor fine-tuned with BayesSearchCV to achieve peak predictive performance.</li>
         </ul>
 
+
+            <h3 class="features-title">Project Details</h3>
+            <p>For a more in-depth look at the project's features and a demonstration of the UI, please visit the details page.</p>
+            <a href="https://github.com/rafisaiyari/algal-bloom-prediction-system" class="cv-button" target="_blank">Read More</a>
+
         </main>
 
         <!-- Added style="position: static;" to override sticky position from styles.css -->
@@ -95,10 +111,6 @@
             <div class="metadata-block">
                 <strong>Status</strong>
                 <p>Completed (Thesis Project)</p>
-            </div>
-            <div class="metadata-block">
-                <strong>Links</strong>
-                <a href="#" class="metadata-link" target="_blank">GitHub Repository (Private)</a>
             </div>
         </aside>
     </section>
